@@ -1,0 +1,51 @@
+body {
+    background-color: #F9FBFD;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a:hover {
+    text-decoration: unset;
+}
+
+ul {
+    padding-inline-start: 20px;
+}
+
+.wrap .container {
+    max-width: 800px;
+}
+
+.wrap .container img {
+    border-radius: 10px;
+}
+
+.wrap .container .block {
+    padding: 1rem 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.wrap .container .block .info__item i {
+    margin-right: 0.5rem;
+}
+
+.wrap .container .block .title {
+    border-bottom: solid #000000 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.wrap .container .block .divider {
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 2px solid #e9ecef;
+}
+
+.wrap .container .block ul.none-style {
+    padding: 0;
+}
+
+.wrap .container .block ul.none-style li {
+    list-style-type: none;
+}
