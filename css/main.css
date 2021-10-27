@@ -17,6 +17,8 @@ ul {
 
 .wrap .container img {
     border-radius: 10px;
+    max-width: 192px;
+    max-height: 192px;
 }
 
 .wrap .container .block {
