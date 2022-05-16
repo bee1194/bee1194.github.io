@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="REFRESH" content="1800"/>
+    <meta property="og:url" content="https://andyle.info"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Andy Le"/>
+    <meta property="og:description" content="Welcome"/>
+    <meta property="og:image" content="https://andyle.info/img/avt.jpg"/>
+    <title>Andy Le</title>
+    <link rel="icon" type="image/png" href="img/favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="p-3">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="border p-5 d-flex">
+                    <h3>Score:</h3>
+                    <h3 class="ml-2" id="score">0</h3>
+                </div>
+                <div class="border p-5">
+                    <div class="text-center">
+                        <p>Câu 1: Hãy cho biết tổng của phép tính sau?</p>
+                        <h4>1 + 1 = ?</h4>
+                    </div>
+                    <div class="text-center">
+                        <div>
+                            <button type="button" class="btn btn-primary px-5" data-toggle="modal"
+                                    data-target="#wrong-modal" id="answer-1-w">1
+                            </button>
+                            <button type="button" class="btn btn-success px-5" data-toggle="modal"
+                                    data-target="#right-modal" id="answer-1-r">2
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="border p-5">
+                    <div class="text-center">
+                        <p>Câu 2: Bạn có thích Andy Le không?</p>
+                    </div>
+                    <div class="d-flex">
+                        <div class="mr-auto ml-auto">
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <button type="button" class="btn btn-primary px-5" data-toggle="modal"
+                                                    data-target="#right-modal" id="answer-2-r">Có
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-success px-5" id="answer-2-1">
+                                                Không
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-success px-5 d-none" id="answer-2-2">
+                                                Không
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="right-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="right-modal-title">CHÍNH XÁC</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bạn được 10 điểm!
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="wrong-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="wrong-modal-title">KHÔNG CHÍNH XÁC</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Cố gắng lại lần sau nhé!
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="win-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="win-modal-title">CHIẾN THẮNG</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Chúc mừng bạn đã chiến thắng!
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        var score = 0;
+        $("#answer-2-1").click(function () {
+            $(this).addClass("d-none");
+            $("#answer-2-2").removeClass("d-none");
+        }).hover(function () {
+            $(this).addClass("d-none");
+            $("#answer-2-2").removeClass("d-none");
+        });
+        $("#answer-2-2").click(function () {
+            $(this).addClass("d-none");
+            $("#answer-2-1").removeClass("d-none");
+        }).hover(function () {
+            $(this).addClass("d-none");
+            $("#answer-2-1").removeClass("d-none");
+        });
+        $("#answer-1-r").click(function (qualifiedName, value) {
+            score = score + 10;
+            $("#score").html(score);
+            $("#answer-1-w").attr("disabled", true);
+            $(this).attr("disabled", true);
+            if (score === 10) {
+                $('#right-modal').modal('show');
+            }
+            if (score === 20) {
+                $('#win-modal').modal('show');
+            }
+        });
+        $("#answer-2-r").click(function () {
+            score = score + 10;
+            $("#score").html(score);
+            $(this).attr("disabled", true);
+            $("#answer-2-1").attr("disabled", true);
+            $("#answer-2-2").attr("disabled", true);
+            if (score === 10) {
+                $('#right-modal').modal('show');
+            }
+            if (score === 20) {
+                $('#win-modal').modal('show');
+            }
+        });
+    });
+</script>
+</body>
+</html>
